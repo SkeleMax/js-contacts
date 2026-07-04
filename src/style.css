@@ -69,7 +69,7 @@ input::placeholder {
 }
 
 /* Главная кнопка */
-button[type="submit"] {
+.submit-btn {
   width: 100%;
   padding: 15px;
   background: linear-gradient(45deg, #ff2a93, #00ffff); /* Перелив из розового в голубой */
@@ -84,7 +84,7 @@ button[type="submit"] {
   box-shadow: 0 5px 15px rgba(255, 42, 147, 0.4);
 }
 
-button[type="submit"]:hover {
+.submit-btn:hover{
   transform: scale(1.02); /* Увеличивается при наведении */
   box-shadow: 0 5px 25px rgba(0, 255, 255, 0.6);
 }
