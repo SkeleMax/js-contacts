@@ -1,0 +1,166 @@
+/* Подключаем современный шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Плавные переходы для всех элементов */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Тёмный градиентный фон в стиле ночного города */
+body {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Стеклянный контейнер (Glassmorphism) */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05); /* Полупрозрачный фон */
+  backdrop-filter: blur(15px); /* Эффект размытия сзади */
+  -webkit-backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 20px rgba(255, 42, 147, 0.2); /* Легкое розовое свечение */
+}
+
+/* Неоновый заголовок */
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 0;
+  color: #fff;
+  text-shadow: 0 0 10px #ff2a93, 0 0 20px #ff2a93, 0 0 40px #ff2a93; /* Розовый неон */
+}
+
+/* Инпуты (поля ввода) */
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #00ffff; /* Голубой текст при вводе */
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Анимация при нажатии на инпут */
+input:focus {
+  border-color: #00ffff; /* Голубая рамка */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px); /* Слегка приподнимается */
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Главная кнопка */
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #ff2a93, #00ffff); /* Перелив из розового в голубой */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 42, 147, 0.4);
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.02); /* Увеличивается при наведении */
+  box-shadow: 0 5px 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Список контактов */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+/* Карточка контакта с анимацией появления */
+li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border-left: 4px solid #00ffff; /* Голубая полоса слева */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: slideIn 0.5s ease-out backwards; /* Анимация выезда */
+}
+
+li strong {
+  font-size: 1.2em;
+  color: #ff2a93;
+}
+
+/* Блок кнопок в карточке */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  flex: 1; /* Кнопки делят место поровну */
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Кнопка редактирования (Голубой неон) */
+.edit-btn {
+  border: 1px solid #00ffff;
+  color: #00ffff;
+}
+
+.edit-btn:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* Кнопка удаления (Розовый неон) */
+.delete-btn {
+  border: 1px solid #ff2a93;
+  color: #ff2a93;
+}
+
+.delete-btn:hover {
+  background: #ff2a93;
+  color: #fff;
+  box-shadow: 0 0 10px #ff2a93;
+}
+
+/* Магия! Анимация плавного появления карточек снизу */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

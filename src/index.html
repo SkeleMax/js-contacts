@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мої контакти</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Книга контактів</h1>
+    
+    <form id="contact-form">
+      <input type="hidden" id="contact-id">
+      
+      <input type="text" id="firstName" placeholder="Ім'я" required>
+      <input type="text" id="lastName" placeholder="Прізвище" required>
+      <input type="tel" id="phone" placeholder="Телефон" required>
+      <input type="email" id="email" placeholder="Email" required>
+      
+      <button type="submit" id="submit-btn">Додати контакт</button>
+    </form>
+
+    <ul id="contacts-list"></ul>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
